@@ -37,29 +37,7 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <th:block th:each="job: ${jobs}">
-        <table class="job-listing">
-            <tr>
-                <td th:text ="${job.getId()}"></td>
-            </tr>
-            <tr>
-                <td th:text ="${job.getName()}"></td>
-            </tr>
-            <tr>
-                <td th:text ="${job.getEmployer()}"></td>
-            </tr>
-            <tr>
-                <td th:text ="${job.getLocation()}"></td>
-            </tr>
-            <tr>
-                <td th:text ="${job.getPositionType()}"></td>
-            </tr>
-            <tr>
-                <td th:text ="${job.getCoreCompetency()}"></td>
-            </tr>
-
-        </table>
-    </th:block>
+    <p th:replace = "fragments :: jobslist"></p>
 </div>
 
 </body>
